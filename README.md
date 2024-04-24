@@ -26,17 +26,13 @@ We used the Sokoto Coventry Fingerprint Dataset (SOCOFing) from Kaggle for this 
 
 We employed a Deep Learning approach using Convolutional Neural Networks (CNNs) to process and analyze the fingerprint images.
 
-### Training Process
+### Model Architecture
 
-- **Dataset**: The model was trained on the SOCOFing dataset to learn the intricate patterns and features of fingerprints.
+The model architecture involves two input layers for two images, followed by a feature extraction branch, where convolutional layers with batch normalization and dropout are applied. The extracted features from both inputs are then subtracted, and the resulting features are passed through a classification head to output a binary classification (match or non-match).
 
-### Feature Extraction
+### Preprocessing
 
-- **CNNs**: CNNs are adept at automatically extracting meaningful features from images, making them ideal for fingerprint recognition tasks.
-
-### Model Optimization
-
-- **Techniques**: Various techniques were applied to optimize the model's performance and accuracy, ensuring reliable fingerprint matching.
+A preprocessing Python file (`Fingerprint_CNN_Preprocess.py`) is provided for dataset creation, and multiple versions of the train file for model training are available, with the latest being `Fingerprint_CNN_Train_V4.py`.
 
 ## Results
 
